@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Price List</title>
+	 
+	</head>
+	<body style="padding: 20px 40px;">
+
+		<ul>
+
+
+		</ul>
+	<script>
+		const listEL = document.querySelector('ul');
+		fetch('https://script.google.com/macros/s/AKfycbzfgjpvPbhil5Ifo-6NirTA1YdlKWqM7hkgEMPtvnBze_l6vqHz4RfhvWOBhh_3h_iz/exec')
+			.then(res => res.json())
+			.then(data => {
+				data.data.forEach(event => {
+					//const posterUrl = event.PosterLink ? event.PosterLink + '/d/' : '';
+					//<img src="https://https://drive.google.com/file/d/1qr-5DZ87LqsPsZoBnxuRVrJutguu7ehg/view">
+					listEL.insertAdjacentHTML('beforeend', `
+					
+					
+						<li>${event.Date} ${event.Day} ${event.Time} ${event.Artists}</li>`);
+						
+				});
+			
+		});
+	</script>
+	
+	
+</body>
+</html>
