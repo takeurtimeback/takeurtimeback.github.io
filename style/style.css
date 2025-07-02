@@ -1,0 +1,104 @@
+* {
+    image-rendering: pixelated;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: cadetblue gainsboro;
+    overscroll-behavior: none;
+}
+
+.room {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transform: scale(0.70) translateY(-25%);
+}
+
+span {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(1em + 1.75vw);
+    color: #FFF;
+    line-height: 1;
+    filter: drop-shadow(1px 1px 0 black)
+        drop-shadow(-1px 1px 0 black) 
+        drop-shadow(1px -1px 0 black) 
+        drop-shadow(-1px -1px 0 black);
+    text-transform: uppercase;
+    z-index: 99;
+}
+
+img{
+    width:100%;
+    height:auto;
+}
+
+.rotate {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    position: absolute;
+}
+.rotate:hover img, .rotate:focus img {
+    transform: rotate(3deg);
+}
+.rotate:hover span, a:focus span {
+    opacity: 1;
+}
+
+.appear {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    position: absolute;
+}
+.appear img {
+    opacity: 0;
+}
+.appear:hover img, .appear:hover span, a:focus img {
+    opacity: 1;
+}
+
+.DoorBackground{
+    /* height:100%;
+    background: url("../imgs/DoorBackground.png") center no-repeat;
+    background-position: center; */
+    margin: 0;
+    padding: 0;
+    background-image: url("../imgs/DoorBackground.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto; /* Stretches to full width, height adjusts automatically */
+    background-attachment: scroll; /* The image scrolls with content (default, can omit) */
+
+}
+
+.background-image{
+    display: block;
+    width: 100%;
+    height: auto;
+    
+  width: 100%;
+  height: 100vh;
+  object-fit: fill;
+}
+
+.posters-container{
+    width:57vw;
+    height: 142vw;
+    z-index: 2;
+    position: absolute;
+    top:30vw;
+    left:22vw;
+
+    border: solid 1em red;
+}
+
+@media screen and (max-device-width : 800px){
+    .room { transform: scale(0.95);	}
+    span { font-size: calc(0.5em + 1.7vw); }
+    header { margin: 10px auto; }
+}

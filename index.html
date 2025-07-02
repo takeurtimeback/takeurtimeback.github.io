@@ -1,44 +1,25 @@
 <!DOCTYPE html>
-<html>
-	<head>
-	  <title>tytweb</title>
-	 
-	</head>
-	<body style="padding: 20px 40px;">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYT - HOME</title>
 
-		<ul>
+    <link href="./style/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+    <header>
+    </header>
+    <main class="room">
+        <a href="./html/door.html" class="rotate" style="top: 10vw; left:0vw; z-index: 2;">
+            <img src="./imgs/Door.png" style="width:25vw" alt="">
+            <span>Door</span>
+        </a>
 
-
-		</ul>
-	<script>
-		const listEL = document.querySelector('ul');
-		fetch('https://script.google.com/macros/s/AKfycbzfgjpvPbhil5Ifo-6NirTA1YdlKWqM7hkgEMPtvnBze_l6vqHz4RfhvWOBhh_3h_iz/exec')
-			.then(res => res.json())
-			.then(data => {
-				data.data.forEach(event => {
-					const sheetUrl = event.PosterLink;
-					const match = sheetUrl.match(/\/d\/([^/]+)/);
-					const posterID = match ? match[1] : null;
-					
-					const posterURL = "https://drive.google.com/thumbnail?id=" + posterID;
-					listEL.insertAdjacentHTML('beforeend', `
-						
-						<li>${event.Date} ${event.Day} ${event.Time} ${event.Artists}</li>`);
-
-						
-					if(posterID != null) {
-						listEL.insertAdjacentHTML('beforeend', `
-						<img src =" ${posterURL} " >
-						`);
-					}
-					
-					
-						
-				});
-			
-		});
-	</script>
-	
-	
+        <a href="" class="rotate" style="top: 20vw; right:0vw; z-index: 2;">
+            <img src="./imgs/Shelf.png" style="width:30vw" alt="">
+            
+        </a>
+    </main>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>tytweb</title>
+	 
+	</head>
+	<body style="padding: 20px 40px;">
+
+		<ul>
+
+
+		</ul>
+	<script>
+		const listEL = document.querySelector('ul');
+		fetch('https://script.google.com/macros/s/AKfycbzfgjpvPbhil5Ifo-6NirTA1YdlKWqM7hkgEMPtvnBze_l6vqHz4RfhvWOBhh_3h_iz/exec')
+			.then(res => res.json())
+			.then(data => {
+				data.data.forEach(event => {
+					const sheetUrl = event.PosterLink;
+					const match = sheetUrl.match(/\/d\/([^/]+)/);
+					const posterID = match ? match[1] : null;
+					
+					const posterURL = "https://drive.google.com/thumbnail?id=" + posterID;
+					listEL.insertAdjacentHTML('beforeend', `
+						
+						<li>${event.Date} ${event.Day} ${event.Time} ${event.Artists}</li>`);
+
+						
+					if(posterID != null) {
+						listEL.insertAdjacentHTML('beforeend', `
+						<img src =" ${posterURL} " >
+						`);
+					}
+					
+					
+						
+				});
+			
+		});
+	</script>
+	
+	
+</body>
+</html>
