@@ -6,7 +6,9 @@
     scrollbar-color: cadetblue gainsboro;
     overscroll-behavior: none;
 }
-
+body{
+    display:block;
+}
 .room {
     width: 100%;
     height: 300px;
@@ -62,40 +64,57 @@ img{
     opacity: 1;
 }
 
-.DoorBackground{
-    /* height:100%;
-    background: url("../imgs/DoorBackground.png") center no-repeat;
-    background-position: center; */
-    margin: 0;
-    padding: 0;
-    background-image: url("../imgs/DoorBackground.png");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% auto; /* Stretches to full width, height adjusts automatically */
-    background-attachment: scroll; /* The image scrolls with content (default, can omit) */
-
-}
 
 .background-image{
-    display: block;
     width: 100%;
-    height: auto;
-    
-  width: 100%;
-  height: 100vh;
-  object-fit: fill;
-}
-
-.posters-container{
-    width:57vw;
-    height: 142vw;
-    z-index: 2;
+    height: 100vh;
+    object-fit: fill;
+    z-index: -2;
     position: absolute;
-    top:30vw;
-    left:22vw;
-
-    border: solid 1em red;
+    top:0;
 }
+/* .poster-image{
+    width:20vw;
+    height:auto;
+} */
+
+.events-container{
+    position: absolute;
+    top:15vh;
+    width: 56%;
+    height: 72vh;
+    left:22%;
+    z-index: 1;
+    /* background-color: red;   */
+    overflow: auto;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2em; /* spacing between items */
+}
+.event-item {
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poster-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.event-details {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 
 @media screen and (max-device-width : 800px){
     .room { transform: scale(0.95);	}
