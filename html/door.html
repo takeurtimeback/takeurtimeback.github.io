@@ -31,7 +31,7 @@
         .then(res => res.json())
         .then(data => {
             data.data
-            .filter(event => event.Artists && event.Artists.trim() !== "")
+            .filter(event => event.DisplayWeb == true)
             .forEach(event => {
                 const sheetUrl = event.PosterLink || "";
                 const match = sheetUrl.match(/\/d\/([^/]+)/);
