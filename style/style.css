@@ -13,9 +13,14 @@ body{
     width: 100%;
     height: 300px;
     position: relative;
-    transform: scale(0.70) translateY(-25%);
+    transform: scale(0.80) translateY(-15%);
 }
-
+.landing{
+    /* background: url("../imgs/background-tile.png");
+    background-repeat: repeat;
+    background-size: 8%; */
+    background-color: black;
+}
 span {
     opacity: 0;
     position: absolute;
