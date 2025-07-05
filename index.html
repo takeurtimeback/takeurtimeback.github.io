@@ -8,7 +8,32 @@
 
     <link href="./style/style.css" rel="stylesheet" type="text/css" media="all">
 
+<script>
+//declare flavor text
+const flavorText = [
+    "No Working Is: shared resources, radical education, mutual aid",
+    "The smell of fish wafts through the air",
+    "A small black cat runs by",
+    "You hear a faint melody coming from the door",
 
+];
+//choose random flavour text
+const flavourChoice = Math.floor(Math.random() * flavorText.length);
+//set flavour text
+document.addEventListener("DOMContentLoaded", function() {
+    const marquee = document.createElement("marquee");
+    marquee.style.backgroundColor = "rgba(108, 206, 121, 0.767)";
+    marquee.style.fontSize = "2vw";
+//position marquee at top of screen
+    marquee.style.position = "fixed";
+    marquee.style.top = "0";
+    marquee.setAttribute("behavior", "scroll");
+    marquee.setAttribute("direction", "left");
+    marquee.setAttribute("scrollamount", "30");
+    marquee.textContent = flavorText[flavourChoice];
+    document.body.appendChild(marquee);
+});
+</script>
 
 </head>
 <body style="background-color:rgba(0, 0, 0, 0.671);">
