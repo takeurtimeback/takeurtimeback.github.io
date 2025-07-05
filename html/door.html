@@ -32,41 +32,39 @@
 
     <script>
         const listEL = document.querySelector('ul');
+        const jDat = JSON.parse(localStorage.getItem('jDat')) || [];
+        console.log(jDat);
 
-        fetch('https://script.google.com/macros/s/AKfycbzfgjpvPbhil5Ifo-6NirTA1YdlKWqM7hkgEMPtvnBze_l6vqHz4RfhvWOBhh_3h_iz/exec')
-        .then(res => res.json())
-        .then(data => {
-            data.data
-            .filter(event => event.DisplayWeb == true)
-            .forEach(event => {
-                const sheetUrl = event.PosterLink || "";
-                const match = sheetUrl.match(/\/d\/([^/]+)/);
-                const posterID = match ? match[1] : null;
-                const posterURL = posterID ? `https://drive.google.com/thumbnail?id=${posterID}` : null;
+    
+        jDat.data.forEach(event => {
+    if (event.DisplayWeb == true) {
+        const sheetUrl = event.PosterLink || "";
+        const match = sheetUrl.match(/\/d\/([^/]+)/);
+        const posterID = match ? match[1] : null;
+        const posterURL = posterID ? `https://drive.google.com/thumbnail?id=${posterID}` : null;
 
-                let liHTML = `<li class="event-item">`;
+        let liHTML = `<li class="event-item">`;
 
-                if (posterURL) {
-                liHTML += `<img class="poster-image" src="${posterURL}" alt="Poster for ${event.Artists}">`;
-                }
+        if (posterURL) {
+            liHTML += `<img class="poster-image" src="${posterURL}" alt="Poster for ${event.Artists}">`;
+        }
 
-               liHTML += `
-                <div class="event-details">
-                    <div class="event-time">
+        liHTML += `
+            <div class="event-details">
+                <div class="event-time">
                     ${event.Date} ${event.Day} ${event.Time}
-                    </div>
-                    <div class="event-artists">
-                    ${event.Artists}
-                    </div>
                 </div>
-                </li>`;
-                
-                listEL.insertAdjacentHTML('beforeend', liHTML);
-            });
-        })
-        .catch(err => {
-            console.error("Fetch error:", err);
-        });
+                <div class="event-artists">
+                    ${event.Artists}
+                </div>
+            </div>
+        </li>`;
+
+        listEL.insertAdjacentHTML('beforeend', liHTML);
+    }
+});
+        
+      
     </script>
 </body>
 </html>
