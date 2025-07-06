@@ -20,37 +20,53 @@ const flavorText = [
 ];
 //choose random flavour text
 const flavourChoice = Math.floor(Math.random() * flavorText.length);
+
 //set flavour text
 document.addEventListener("DOMContentLoaded", function() {
-    const marquee = document.createElement("marquee");
-    marquee.style.backgroundColor = "rgba(108, 206, 121, 0.767)";
-    marquee.style.fontSize = "2vw";
-//position marquee at top of screen
-    marquee.style.position = "fixed";
-    marquee.style.top = "0";
-    marquee.setAttribute("behavior", "scroll");
-    marquee.setAttribute("direction", "left");
-    marquee.setAttribute("scrollamount", "30");
-    marquee.textContent = flavorText[flavourChoice];
-    document.body.appendChild(marquee);
+    // add plain text to screen
+
+
+
+    const text = document.createElement("div", id = "myDIV");
+    text.id = "myDIV";
+  //make text colour white
+    text.style.color = "rgba(255, 255, 255, 0.25)";
+    text.style.fontSize = "1vw";
+    text.style.position = "fixed";
+    text.style.bottom = "0";
+     text.style.left = "0";
+   //set the font to cryv 
+    text.style.fontFamily = "'Cryv2', sans-serif";
+    text.textContent = flavorText[flavourChoice];
+    document.body.appendChild(text);
 });
 </script>
 
 </head>
+
 <body class="landing">
 
 
     <div id="loading" style="position:absolute; z-index: 3;">
     <img src="./imgs/catrunning.gif" style="width: 10vw;" alt="" class="center" >
     </div>
-
+    <main class="room">
+        <a  class="rotate" style="top: 28vw; left:47vw; z-index: 2;" class="center" id="home-link">
+            <img src="./imgs/Door.png" style="width:10vw" alt="" >
+            <span>Enter</span>
+        </a>
+        <img src="./imgs/TYT_Alley.png" style=" width:100vw">
+    </main>
     <script>
+        
+       
     //LOADing APP SCRIPT...
     fetch('https://script.google.com/macros/s/AKfycbzfgjpvPbhil5Ifo-6NirTA1YdlKWqM7hkgEMPtvnBze_l6vqHz4RfhvWOBhh_3h_iz/exec')
         .then(res => res.json())
         .then(data => {
         localStorage.setItem('jDat', JSON.stringify(data));
         // Hide loading text
+        document.getElementById("home-link").href="./html/landing.html";
         document.getElementById('loading').style.display = 'none';
         })
         .catch(() => {
@@ -61,13 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     <header>
     </header>
-    <main class="room">
-        <a href="./html/landing.html" class="rotate" style="top: 28vw; left:47vw; z-index: 2;" class="center">
-            <img src="./imgs/Door.png" style="width:10vw" alt="" >
-            <span>Enter</span>
-        </a>
-        <img src="./imgs/TYT_Alley.png" style=" width:100vw">
-    </main>
+    
    
         
       
