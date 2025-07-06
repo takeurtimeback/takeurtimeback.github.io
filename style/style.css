@@ -119,7 +119,12 @@ img{
   text-align: center;
   font-size: 0.9rem;
 }
-
+.Archive p{
+    font-size: 1.2rem;
+    color: #fff;
+ 
+    margin: 0.5rem 0;
+}
 .center { 
 display: block; 
 margin-left: auto; 

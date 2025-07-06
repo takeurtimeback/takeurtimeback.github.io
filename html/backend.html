@@ -2,48 +2,63 @@
 <html>
 	<head>
 	  <title>tytweb</title>
-	 
+	 <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">
 	</head>
-	<body style="padding: 20px 40px;">
-		<!--- button to go back to index.html that is on top of the door image--> 
-    <a href="../index.html" class="rotate" style="position:absolute">
-            <img src="../imgs/PinTest.png" style=" width:2vw" alt="">
-            <span style=" font-size:1vw; left: 2vw;">home</span>
-        </a>
+	<body class="landing Archive">
+<p>
+Close up of shelf each square is a different archive type page
+</p>
 
-		<ul>
+<br>
+<p>
+ About / manifesto
+</p>
+		
+		 <br>
+<p>
+		Welcome to our home. 
 
+Anything we can do for you, we will. - because we know you’re doing your best. 
 
-		</ul>
-	<script>
-		const listEL = document.querySelector('ul');
-		fetch('https://script.google.com/macros/s/AKfycbzfgjpvPbhil5Ifo-6NirTA1YdlKWqM7hkgEMPtvnBze_l6vqHz4RfhvWOBhh_3h_iz/exec')
-			.then(res => res.json())
-			.then(data => {
-				data.data.forEach(event => {
-					const sheetUrl = event.PosterLink;
-					const match = sheetUrl.match(/\/d\/([^/]+)/);
-					const posterID = match ? match[1] : null;
-					
-					const posterURL = "https://drive.google.com/thumbnail?id=" + posterID;
-					listEL.insertAdjacentHTML('beforeend', `
-						
-						<li>${event.Date} ${event.Day} ${event.Time} ${event.Artists}</li>`);
+All we ask in exchange - is that your best includes providing that same courtesy and patience to everyone you can. A skill we all agree to prioritize, at the very least, while in this space.
 
-						
-					if(posterID != null) {
-						listEL.insertAdjacentHTML('beforeend', `
-						<img src =" ${posterURL} " >
-						`);
-					}
-					
-					
-						
-				});
-			
-		});
-	</script>
-	
+Our belief is that effort and labor are not a prerequisite for being considered valuable, and are instead - a natural resource that flowers from every human being that is provided the right conditions. Our goal is to point our personal labor and effort towards creating those conditions for everyone we can.
+
+We do this by providing space for individuals to investigate what their interests, passions, and desires are - and encouraging them to define for themselves how to turn those discoveries into a meaningful and sustainable life, while making the fewest possible compromises. 
+
+While “working” might be part of that process for some, we don’t abstractly value it over healing, over learning, over personal-growth or community building. We do not value it over resting. We refuse to put “work” above anyone - including ourselves. 
+
+By starting there, we hope to create a community in which we are fueled and motivated by the experience of being alive - not coerced into labor to prove we deserve it. No-working is anything we do, ironically including traditional work, that moves us towards that goal. 
+
+So, come in!
+
+Ask for what you need and give up what you don’t. 
+
+Be yourself, do your best, 
+
+Take your time 
+</p>
+<br>
+<p>
+		 Book archive
+		 </p>
+		<br>
+		<p>
+		 Show archive
+		 </p>
+		 <br> 
+		 <p>
+		 Staff/Volunteers
+		 </p>
+		 <br> 
+		 <p>
+	 Knick nack/oddities
+	 </p>
+	 <br> 
+	 <p>
+		 Time takers members 
+		 </p>
+
 	
 </body>
 </html>
