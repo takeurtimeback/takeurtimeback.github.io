@@ -37,41 +37,36 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 </head>
-<body style="background-color:rgba(0, 0, 0, 0.671);">
+<body class="landing">
 
 
-<div id="loading">
-<img src="./imgs/catrunning.gif" style="width: 10vw;" alt="" class="center">
-</div>
+    <div id="loading" style="position:absolute; z-index: 3;">
+    <img src="./imgs/catrunning.gif" style="width: 10vw;" alt="" class="center" >
+    </div>
 
-<script>
-  //LOADing APP SCRIPT...
-  fetch('https://script.google.com/macros/s/AKfycbzfgjpvPbhil5Ifo-6NirTA1YdlKWqM7hkgEMPtvnBze_l6vqHz4RfhvWOBhh_3h_iz/exec')
-    .then(res => res.json())
-    .then(data => {
-      localStorage.setItem('jDat', JSON.stringify(data));
-      // Hide loading text
-      document.getElementById('loading').style.display = 'none';
-    })
-    .catch(() => {
-      document.getElementById('loading').textContent = 'Failed to load data.';
-    });
-</script>
-
-
-
-
-
-
+    <script>
+    //LOADing APP SCRIPT...
+    fetch('https://script.google.com/macros/s/AKfycbzfgjpvPbhil5Ifo-6NirTA1YdlKWqM7hkgEMPtvnBze_l6vqHz4RfhvWOBhh_3h_iz/exec')
+        .then(res => res.json())
+        .then(data => {
+        localStorage.setItem('jDat', JSON.stringify(data));
+        // Hide loading text
+        document.getElementById('loading').style.display = 'none';
+        })
+        .catch(() => {
+        document.getElementById('loading').textContent = 'Failed to load data.';
+        });
+    </script>
 
 
     <header>
     </header>
     <main class="room">
-        <a href="./html/landing.html" class="rotate" style="top: 10vw; left:30vw; z-index: 2;" class="center">
-            <img src="./imgs/Door.png" style="width:25vw" alt="" >
+        <a href="./html/landing.html" class="rotate" style="top: 28vw; left:47vw; z-index: 2;" class="center">
+            <img src="./imgs/Door.png" style="width:10vw" alt="" >
             <span>Enter</span>
-             
+        </a>
+        <img src="./imgs/TYT_Alley.png" style=" width:100vw">
     </main>
    
         
