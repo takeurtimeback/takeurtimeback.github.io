@@ -56,6 +56,19 @@ img{
     opacity: 1;
 }
 
+.rotate2 {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+ 
+}
+.rotate2:hover img, .rotate2:focus img {
+    transform: rotate(3deg);
+}
+.rotate2:hover span, a:focus span {
+    opacity: 1;
+}
+
 .appear {
     width: fit-content;
     height: fit-content;
