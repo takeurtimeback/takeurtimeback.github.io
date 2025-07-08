@@ -31,31 +31,40 @@
     <img src="../imgs/DoorBackground.png" class="background-image" alt="">
 
     <script>
+       
         const listEL = document.querySelector('ul');
+        //retrieve posters from localStorage
         const jDat = JSON.parse(localStorage.getItem('jDat')) || [];
         console.log(jDat);
 
-    
+        //loop through events and only use those that have displayweb set to true
         jDat.data.forEach(event => {
     if (event.DisplayWeb == true) {
+        //process each poster link
+        //try just acessing google drive link and getting posters from date naming convention
         const sheetUrl = event.PosterLink || "";
         const match = sheetUrl.match(/\/d\/([^/]+)/);
         const posterID = match ? match[1] : null;
         const posterURL = posterID ? `https://drive.google.com/thumbnail?id=${posterID}` : null;
+        const eventbriteURL = event.Eventbrite || "";
+        console.log(eventbriteURL)
 
         let liHTML = `<li class="event-item">`;
 
+         //add each poster as a rot class and have them linked to their respective eventbrite links        
         if (posterURL) {
-            liHTML += `<img class="poster-image" src="${posterURL}" alt="Poster for ${event.Artists}">`;
+            liHTML += ` <a href="${eventbriteURL}" >
+            <img class="poster-image" src="${posterURL}" alt="Poster for ${event.Artists}">
+        </a>`;
         }
-
+        //${event.Time}
         liHTML += `
             <div class="event-details">
                 <div class="event-time">
-                    ${event.Date} ${event.Day} ${event.Time}
+                    ${event.Date} ${event.Day} 
                 </div>
                 <div class="event-artists">
-                    ${event.Artists}
+                    ${event.Artists}\
                 </div>
             </div>
         </li>`;
