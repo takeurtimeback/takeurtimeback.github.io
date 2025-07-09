@@ -39,9 +39,9 @@
 
         //loop through events and only use those that have displayweb set to true
         jDat.data.forEach(event => {
-    if (event.DisplayWeb == true) {
+            
+    if (event.DisplayWeb == true && event.PosterLink.substring(0, 1) == "h") {
         //process each poster link
-        //try just acessing google drive link and getting posters from date naming convention
         const sheetUrl = event.PosterLink || "";
         const match = sheetUrl.match(/\/d\/([^/]+)/);
         const posterID = match ? match[1] : null;
