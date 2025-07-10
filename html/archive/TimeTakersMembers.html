@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Time Takers Members
+</body>
+<ul>    </ul>
+ <script>
+        
+    const listEL = document.querySelector('ul');   
+    
+    fetch('https://script.google.com/macros/s/AKfycbxdqNhkXMa9ec8smM0KRVhTlUoMQIyGuqcKkMGEBAd3T1-eqO5ENEmcXyc_EC5DP0ZuDQ/exec')
+        .then(res => res.json())
+        .then(data => {
+       data.data.forEach(supporter => {
+            
+       
+    if (supporter.CurrentSupporter == true) {
+       
+       
+        const supporterName1 = supporter.SupporterName || "";
+        console.log(supporterName1);
+        
+
+        let liHTML = `<li class="event-item">`;
+
+         //add each poster as a rot class and have them linked to their respective eventbrite links        
+        
+           
+            liHTML += ` <p> ${supporterName1}</p>`;
+            listEL.insertAdjacentHTML('beforeend', liHTML);
+
+    
+
+        
+    }
+});
+
+
+
+
+        })
+        
+
+      
+
+        //loop through events and only use those that have displayweb set to true
+        
+    </script>
+
+
+</html>
