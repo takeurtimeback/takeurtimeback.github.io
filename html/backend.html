@@ -7,43 +7,82 @@
             <span style=" font-size:1vw; left: 2vw;">home</span>
         </a>
 	 <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">
+	 <img src="../imgs/Construction.jpg" style="width:100vw" alt="">
 	</head>
 	<body class="landing Archive">
+		<style>
+			/* Parent container for the shelf and grid */
+			.shelf-container {
+				position: relative;
+				width: 80vw; /* Adjust as needed */
+				margin: 0 auto;
+			}
+	
+			/* Shelf image styling */
+			.shelf-container img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+	
+			/* Grid container */
+			.grid-container {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 85%;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+				gap: 2%; /* Adjust spacing between boxes */
+			}
+	
+			/* Style for individual boxes */
+			.grid-container a {
+				background-color: rgba(255, 105, 237, 0.091); /* Semi-transparent background */
+				border: 0px solid #000;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				color: #000;
+				font-size: 1vw;
+			}
+	
+			.grid-container a:hover {
+				background-color: rgba(255, 57, 159, 0.4);
+				color: #fff;
+			}
+		 </style>
+		</head>
+		<body class="landing Archive">
+			
+			<p>
+			Close up of shelf each square is a different archive type page
+			</p>
+			
+			<!-- Parent container for shelf and grid -->
+			<div class="shelf-container">
+				<img src="../imgs/shelfclosehires.png" alt="Shelf Image">
+				
+				<!-- Grid container for the 9 boxes -->
+				<div class="grid-container">
+					<a href="./archive/about.html">About </a>
+					<a href="./archive/Books.html">Book Archive</a>
+					<a href="./archive/TimeTakersMembers.html" >TimeTakersMembers</a>
+					<a href="./archive/staff.html">Staff</a>
+					<a href="./archive/page5.html">Page 5</a>
+					<a href="./archive/page6.html">Page 6</a>
+					<a href="./archive/page7.html">Page 7</a>
+					<a href="./archive/page8.html">Page 8</a>
+					<a href="./archive/page9.html">Page 9</a>
+				</div>
+			</div>
 <p>
-Close up of shelf each square is a different archive type page
-</p>
-<img src="../imgs/Construction.jpg" style="width:100vw" alt="">
+
 <br>
-<a href="./archive/about.html" class="rotate2" >
 
-
-<img src="../imgs/about.jpg" alt="Book Archive" style="width: 10vw;">
-		
-</a>
-
-<a href="./archive/Books.html" class="rotate2" >
-
-
-<img src="../imgs/book.jpeg" alt="Book Archive" style="width: 10vw;">
-		
-</a>
-
-</a>
-
-<a href="./archive/TimeTakersMembers.html" class="rotate2" >
-
-
-<img src="../imgs/LuisRot.gif" alt="Timetakersmembers" style="width: 10vw;">
-		
-</a>
-
-<a href="./archive/staff.html" class="rotate2" >
-
-
-<img src="../imgs/LuisRot.gif" alt="Staff" style="width: 10vw;">
-
-		
-</a>
 		
 		 <br>
 
