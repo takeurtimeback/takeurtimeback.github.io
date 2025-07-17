@@ -10,7 +10,7 @@
 
 <script>
     
-//declare flavor text
+//declare flavor text(text that randomly appears on the bottom of the screen)
 const flavorText = [
     "No Working Is: shared resources, radical education, mutual aid",
     "The smell of fish wafts through the air",
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <body class="landing">
 
-
+    <!-- set loading text-->
     <div id="loading" style="position:absolute; z-index: 3;">
         <h1 class="center" style="font-size: 2vw; color: rgba(255, 255, 0, 0.25); font-family: 'Cryv2', sans-serif;">
 
@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
     <img src="./imgs/catrunning.gif" style="width: 10vw;" alt="" class="center" >
     </div>
+    <!-- make interactable entrance door-->
     <main class="room">
         <a  class="rotate" style="top: 28vw; left:47vw; z-index: 2;" class="center" id="home-link">
             <img src="./imgs/Door.png" style="width:10vw" alt="" >
@@ -74,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </a>
         <img src="./imgs/TYT_Alley.png" style=" width:100vw">
     </main>
+    <!-- Load Info From Google SPreadsheets-->
     <script>
         
        
@@ -82,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(res => res.json())
         .then(data => {
         localStorage.setItem('jDat', JSON.stringify(data));
-        // Hide loading text
+        // Remove loading text
         document.getElementById("home-link").href="./html/landing.html";
         document.getElementById('loading').style.display = 'none';
         })
