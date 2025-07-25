@@ -22,14 +22,19 @@ body{
     background-color: black;
 }
 .backArrow{
-    background-image: url('./arrow.png');
-     rotate:-90deg;
-    width: 3%; 
-    height: 4%; 
-    position: absolute; 
-    left: 0%; 
-    top: 0%; 
-    z-index: 1;
+    
+    
+   content:url(./arrow.png);
+   rotate:-90deg; 
+   width: 3%; 
+   min-width: 60px; 
+   min-height: 40px; 
+   height: 4%; 
+   position: absolute; 
+   left: 0%; 
+   top: 0%; 
+   z-index: 1;
+
 }
 .desk{
   width:100%;
