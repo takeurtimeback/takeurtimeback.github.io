@@ -8,7 +8,45 @@
 }
 body{
     display:block;
+    font-family: 'VCR_OSD_MONO', Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+    font-family: 'VCR_OSD_MONO';
+    src: url('../fonts/VCR_OSD_MONO_1.001.ttf');   
+}
+@font-face {
+    font-family: 'VCR_OSD_NEUE';
+    src: url('../fonts/VCRosdNEUE.ttf');   
+}
+
+
+h1{
+    font-size:calc(2em + 3vw);
+}
+h2{
+    font-size:calc(1.5em + 1vw);
+}
+h3{
+    font-size:calc(1.2em + 0.6vw);
+}
+h4{
+    font-size:calc(1.1em + 0.5vw);
+}
+p{
+    font-size:calc(0.8em + 0.4vw);
+     line-height: 1.4;
+}
+li{
+    font-size:calc(6em + 0.4vw);
+}
+hr{
+    color:black;
+    border-width: 0.05em;
+    border-style: solid;
+    margin:0.5em;
+}
+
 .room {
     width: 100%;
     height: 300px;
@@ -21,9 +59,7 @@ body{
     background-size: 8%; */
     background-color: black;
 }
-.backArrow{
-    
-    
+.backArrow{ 
    content:url(./arrow.png);
    rotate:-90deg; 
    width: 3%; 
@@ -34,8 +70,8 @@ body{
    left: 0%; 
    top: 0%; 
    z-index: 1;
-
 }
+
 .desk{
   width:100%;
   height:100%;
@@ -60,10 +96,8 @@ body{
   }
 }
 span {
-    
-    opacity: 0;
     position: absolute;
-    top: 50%;
+    bottom:0;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: calc(1em + 1.75vw);
@@ -136,16 +170,25 @@ img{
 } */
 
        
-        .gradient-background {
-            width: 100%; /* Adjust width as needed */
-            height: 150%; /* Adjust height as needed */
-            background-image: url('./GRDbackground.png');
-            background-size: cover; /* Ensures the image covers the entire div */
-            background-position: center; /* Centers the image */
-            background-repeat: repeat; /* Prevents the image from repeating */
-            color: white;
-        }
-       
+.gradient-background {
+    width: 100%; /* Adjust width as needed */
+    height: 150%; /* Adjust height as needed */
+    background-image: url('./GRDbackground.png');
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: repeat; /* Prevents the image from repeating */
+    color: white;
+}
+        
+.door-title{
+    width:fit-content;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    padding:1em 4em 1em 4em;
+}
+
+
 .events-container{
     position: absolute;
     top:15vh;
@@ -155,7 +198,6 @@ img{
     z-index: 1;
     /* background-color: red;   */
     overflow: auto;
-
     list-style: none;
     padding: 0;
     margin: 0;
@@ -182,6 +224,16 @@ img{
   text-align: center;
   font-size: 0.9rem;
 }
+
+.event-time{
+    font-size:calc(1.5em + 0.4vw);
+}
+
+.event-artists{
+    font-size:calc(2em + 0.4vw);
+}
+
+
 .Archive p{
     font-size: 1.2rem;
     color: #fff;
