@@ -53,6 +53,13 @@ hr{
     background-size: cover;
     background-position: center;
 }
+.indexLanding{
+    
+     background-image: url("../imgs/TYT_Alley.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .room {
     width: 100%;
     height: 300px;
@@ -94,6 +101,7 @@ hr{
 }
 span {
     position: absolute;
+    text-align: center;
     bottom:0;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -199,15 +207,15 @@ img{
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Centers the image */
     background-repeat: repeat; /* Prevents the image from repeating */
-    color: white;
+    color: white; 
 }
         
 .door-title{
     width:fit-content;
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.779);
     margin: auto;
-    padding:1em 4em 1em 4em;
+    
 }
 
 

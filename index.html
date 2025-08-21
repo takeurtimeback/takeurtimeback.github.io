@@ -43,14 +43,24 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 </head>
-<div class="div-only-mobile">
-    <img src = "./imgs/rotatephone.gif " style="width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: 1;">
-</div>
 
+<body width ="100%" height="100%" >
 
-
-<body class="landing">
-<div class="desk">
+     
+    <div class = "indexLanding" style ="position: absolute; width:100%; height: 100%;">
+        
+        
+        
+        <a  class="rotate"  style = "display:flex;flex-direction:column;align-items:center;justify-content:center;width:100vw;height:1000vw;max-width:100%;max-height:100%;box-sizing:border-box;overflow:hidden;" id="home-link">
+            
+            <img src="./imgs/Door.png" style="position:absolute; width:115px" alt="" >
+            
+            <h1 style="color: #FFF; display:flex;flex-direction:column;align-items:center;justify-content:center;width:100vw;height:1000vw;max-width:100%;max-height:100%;box-sizing:border-box;overflow:hidden; transform: translate(-0%, +20%); " > ENTER</h1>
+            
+            
+        </a>
+        
+    <!--<img src="./imgs/TYT_Alley.png " style="width:100vw; " alt="">-->
     <!-- set loading text-->
     <div id="loading" style="position:absolute; z-index: 3;">
         <h1 class="center" style="font-size: 2vw; color: rgba(255, 255, 0, 0.25); font-family: 'Cryv2', sans-serif;">
@@ -72,18 +82,17 @@ document.addEventListener("DOMContentLoaded", function() {
         
     <img src="./imgs/catrunning.gif" style="width: 10vw;" alt="" class="center" >
     </div>
+
+
+
     <!-- make interactable entrance door-->
-    <main class="room">
-        <a  class="rotate" style="top: 28vw; left:47vw; z-index: 2;" class="center" id="home-link">
-            <img src="./imgs/Door.png" style="width:10vw" alt="" >
-            <span>Enter</span>
-            
-        </a>
-        <img src="./imgs/TYT_Alley.png " style="width:100vw; background-size:cover" alt="">
+    
+
+       
+        
 
     
-    </main>
-    </div>
+  
     <!-- Load Info From Google SPreadsheets-->
     <script>
         
@@ -109,6 +118,6 @@ document.addEventListener("DOMContentLoaded", function() {
    
         
       
-
+</div>
 </body>
 </html>
