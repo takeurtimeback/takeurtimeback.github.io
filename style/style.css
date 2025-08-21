@@ -92,22 +92,6 @@ hr{
   height:100%;
   background:rgba(0, 0, 0, 0);
 }
-@media screen and (min-aspect-ratio: 1/1.4) {
-  .div-only-mobile{
-  visibility:hidden;
-  }
-  .desk{
-  visibility:visible;
-  }
-}
-@media screen and (max-aspect-ratio: 1/1.2){
- .desk{
-  visibility:hidden;
-  }
- .div-only-mobile{
-  visibility:visible;
-  }
-}
 span {
     position: absolute;
     bottom:0;
@@ -123,6 +107,27 @@ span {
     text-transform: uppercase;
     z-index: 99;
 }
+@media screen and (min-aspect-ratio: 1/1.4) {
+  .div-only-mobile{
+  visibility:hidden;
+  }
+  .desk{
+  visibility:visible;
+  }
+  
+}
+
+
+@media screen and (max-aspect-ratio: 1/1.2){
+ .desk{
+  visibility:hidden;
+  }
+ .div-only-mobile{
+  visibility:visible;
+  }
+  span { font-size: 60%; }
+}
+
 
 img{
     width:100%;
@@ -270,11 +275,6 @@ width: 50%;
   font-style: normal;
 }
 
-@media screen and (max-device-width : 800px){
-    .room { transform: scale(0.95);	}
-    span { font-size: calc(0.5em + 1.7vw); }
-    header { margin: 10px auto; }
-}
 
 #myDIV {
   position: absolute;
