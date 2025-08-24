@@ -67,9 +67,9 @@ hr{
     transform: scale(0.80) translateY(-15%);
 }
 .landing{
-    /* background: url("../imgs/background-tile.png");
+    /* background: url("../imgs/background-tile.png"); */
     background-repeat: repeat;
-    background-size: 8%; */
+    
     background-color: black;
 }
 .backArrow{ 
@@ -89,6 +89,7 @@ hr{
   width:100%;
   height:100%;
   background:rgba(255, 166, 0, 0);
+  background-color: black;
 }
 .div-only-mobile{
     background-image: url("../imgs/Landing-Background.png");
