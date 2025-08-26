@@ -109,7 +109,7 @@ span {
     font-size: calc(1em + 1.75vw);
     color: #FFF;
     line-height: 1;
-    filter: drop-shadow(1px 1px 0 black)
+    filter: drop-shadow(2px 2px 0 black)
         drop-shadow(-1px 1px 0 black) 
         drop-shadow(1px -1px 0 black) 
         drop-shadow(-1px -1px 0 black);
