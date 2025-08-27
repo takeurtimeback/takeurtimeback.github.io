@@ -41,50 +41,66 @@
 
         //loop through events and only use those that have displayweb set to true
         jDat.data.forEach(event => {
-            
-    if (event.DisplayWeb == true && event.PosterLink.substring(0, 1) == "h") {
-        //process each poster link
-        const sheetUrl = event.PosterLink || "";
-        const match = sheetUrl.match(/\/d\/([^/]+)/);
-        const posterID = match ? match[1] : null;
-        const posterURL = posterID ? `https://drive.google.com/thumbnail?id=${posterID}` : null;
-        const eventbriteURL = event.Eventbrite || "";
-        console.log(eventbriteURL)
+            // Parse event date (MM-DD)
+            const [eventMonth, eventDay] = event.Date.split('-').map(Number);
 
-        let liHTML = `<li class="event-item">`;
+            // Get today's month and day
+            const today = new Date();
+            const todayMonth = today.getMonth() + 1; // getMonth() is zero-based
+            const todayDay = today.getDate();
 
-         //add each poster as a rot class and have them linked to their respective eventbrite links        
-        if (posterURL) {
-            if("${eventbriteURL}" != "") {
-            liHTML += ` <a href="${eventbriteURL}" class="rotate2" >
-            <img class="poster-image" src="${posterURL}" alt="Poster for ${event.Artists}">
-        </a>`;
+            // Only show events today or later
+            const isFutureOrToday =
+                eventMonth > todayMonth ||
+                (eventMonth === todayMonth && eventDay >= todayDay);
 
-    }else{
-        liHTML += ` <a class="rotate2" >
-            <img class="poster-image" src="${posterURL}" alt="Poster for ${event.Artists}">
-        </a>`;
-    }
+            if (
+                event.NoDisplayWeb == false &&
+                event.PosterLink.substring(0, 1) == "h" &&
+                isFutureOrToday
+            ) {
+                //process each poster link
+                const sheetUrl = event.PosterLink || "";
+                const match = sheetUrl.match(/\/d\/([^/]+)/);
+                const posterID = match ? match[1] : null;
+                const posterURL = posterID ? `https://drive.google.com/thumbnail?id=${posterID}` : null;
+                const eventbriteURL = event.Eventbrite || "";
+                console.log(eventbriteURL)
 
-        }
-        //
-        liHTML += `
-            <div class="event-details">
-                <div class="event-time">
-                   ${event.Day}
-                    ${event.Date} 
-                   
-                   <hr class="event-hr">
-                </div>
-                <div class="event-artists">
-                   <!-- ${event.Artists}\ -->
-                </div>
-            </div>
-        </li>`;
+                let liHTML = `<li class="event-item">`;
 
-        listEL.insertAdjacentHTML('beforeend', liHTML);
-    }
-});
+                 //add each poster as a rot class and have them linked to their respective eventbrite links        
+                if (posterURL) {
+                    if("${eventbriteURL}" != "") {
+                    liHTML += ` <a href="${eventbriteURL}" class="rotate2" >
+                    <img class="poster-image" src="${posterURL}" alt="Poster for ${event.Artists}">
+                </a>`;
+
+            }else{
+                liHTML += ` <a class="rotate2" >
+                    <img class="poster-image" src="${posterURL}" alt="Poster for ${event.Artists}">
+                </a>`;
+            }
+
+                }
+                //
+                liHTML += `
+                    <div class="event-details">
+                        <div class="event-time">
+                           ${event.Day}
+                            ${event.Date} 
+                           
+                           <hr class="event-hr">
+                        </div>
+                        <div class="event-artists">
+                           <!-- ${event.Artists}\ -->
+                        </div>
+                    </div>
+                </li>`;
+
+                listEL.insertAdjacentHTML('beforeend', liHTML);
+            }
+        });
         
       
     </script>
