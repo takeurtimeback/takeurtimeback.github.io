@@ -1,36 +1,53 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <a href=".\landing.html">
-        <img class = "backArrow">
-    </a>
-  <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">
-</head>
-
-    <header>
-        
-       
-        <title>Booking</title>
-        <h1  style = "color: rgb(255, 255, 255); margin-left: 40%; margin-right: 40%; ">Booking</h1>
-    </header>
-  
+   <a href=".\landing.html">
     
-<body class="gradient-background">
-  
-    <br>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQDsCKxgXFer1FMIlilYz2nwDvh9CtW4abNIZt40ChcFvggA/viewform?embedded=true" width="640" height="640" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> 
-
-
-
-  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FVancouver&showTz=0&showPrint=0&src=NmUxOGE4MjljNTRmZWY1NjQ5Yzg0NzYwYzVhYjUzMjgwYjBkYTcwNzg3MDQwYzc0YTZlMDkxMDY2NTMxZGIwN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23f09300" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-  <div>
-  <a style = "font-size: 2vw" href = "https://docs.google.com/spreadsheets/u/0/d/1eQne4MyjbFnHGzu76Zr7OLLIRORSdpacT4Fpw0_QnsY/htmlview?fbclid=PAZXh0bgNhZW0CMTEAAafmmM1sWBqnqsWpQ8sJCIQKZiEySE1-1eWI9xcjGggFqzir23o2PwvBTi7Q_Q_aem_2tvgIigfYleRkL6ZWKS8xA">
-    booking info
-  </a>
- 
-  <br>
-  <a style = "font-size: 2vw" href = "https://docs.google.com/forms/d/e/1FAIpQLScQDsCKxgXFer1FMIlilYz2nwDvh9CtW4abNIZt40ChcFvggA/viewform">
-    booking forum
-  </a>
-  </div>
-    </body>
+        <img class = "backArrow">
+    </a>  
+    <title>Booking</title>
+    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+        .button-row {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .half-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3vw;
+            color: white;
+            text-decoration: none;
+            height: 100vh;
+            border: none;
+            cursor: pointer;
+            transition: filter 0.2s;
+        }
+        .half-btn.pink {
+            background: #ff69b4;
+        }
+        .half-btn.blue {
+            background: #3498db;
+        }
+        .half-btn:hover {
+            filter: brightness(0.9);
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+    </style>
+</head>
+<body >
+    <div class="button-row">
+        <a class="half-btn pink" href="booking2.html">Join a Show</a>
+        <a class="half-btn blue" href="booking2.html">Book an Event</a>
+    </div>
+</body>
 </html>
