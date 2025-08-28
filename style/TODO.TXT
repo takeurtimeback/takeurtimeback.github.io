@@ -8,7 +8,7 @@ Clean and update Html files
 
 
 
-fix support us page donate button/display
+
 
 collect volunteer images
 
