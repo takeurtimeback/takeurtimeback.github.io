@@ -7,7 +7,6 @@ Clean and update Style sheet
 Clean and update Html files
 
 
-Add piss simulator to bathroom
 
 fix support us page donate button/display
 
