@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<style>
+        .press-btn {
+            position: absolute;
+            left: 31%;
+            bottom: 20%;
+            width: 8%;
+            height: 5%;
+            
+            
+            z-index: 2;
+            cursor: pointer;
+            background: rgba(51, 129, 231, 0.075);
+            color: #222;
+            border: none;
+            border-radius: 1em;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            user-select: none; /* Prevents text selection */
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE10+/Edge */
+        }
+        #pissg-gif {
+            display: none;
+            rotate: -20deg;
+            width: 8%;
+            height: 5%;
+            bottom: 14%;
+            left: 24%;
+            
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
+    <div>
+        <img src="..\..\imgs\tytimmersivesim\piss.jpg" style="width: 100%; height: 100%; position: absolute;">
+        <img id="pissg-gif" src="..\..\imgs\tytimmersivesim\waterflow.gif" alt="Piss GIF">
+        <button class="press-btn"
+            onmousedown="document.getElementById('pissg-gif').style.display='block';"
+            onmouseup="document.getElementById('pissg-gif').style.display='none';"
+            onmouseleave="document.getElementById('pissg-gif').style.display='none';"
+            ontouchstart="document.getElementById('pissg-gif').style.display='block';"
+            ontouchend="document.getElementById('pissg-gif').style.display='none';"
+        >
+           
+        </button>
     <div>
        
         <img src="..\..\imgs\tytimmersivesim\pisser4.png" style="width: 100%; height: 100%; position: absolute;">
