@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <body width ="100%" height="100%" >
 
      
-    <div class="indexLanding" style="position: absolute; width:100vw; height:100vh; top:0; left:0; display: flex; align-items: center; justify-content: center; background-image: url('./imgs/TYT_Alley.png'); background-size: cover; background-position: center;">
-        <a class="rotate" id="home-link" style="text-decoration:none; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-            <img src="./imgs/Door.png" style="width: 10vw; max-width: 300px; min-width: 118px; height: auto;" alt="">
-            <h1 style="font-size: 3vw; color: #FFF; margin-top: 2vw;">ENTER</h1>
+    <div class="indexLanding" style="position: absolute; width:100vw; height:100vh; background-image: url('./imgs/TYT_Alley.png'); background-size: cover; background-position: center;">
+        <a class="rotate" id="home-link" style=" position:absolute; top: 38vh; left:47vw; z-index: 2;">
+            <img src="./imgs/Alley_Door.png" style="width: 7vw; max-width: 300px; min-width: 60px; height: auto;" alt="">
+            <span style="position:absolute; bottom:-5vw;">Enter</span>
         </a>
     </div>
         
@@ -79,8 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
   
     <!-- Load Info From Google SPreadsheets-->
     <script>
-        
-       
     //LOADing APP SCRIPT...
     fetch('https://script.google.com/macros/s/AKfycbzfgjpvPbhil5Ifo-6NirTA1YdlKWqM7hkgEMPtvnBze_l6vqHz4RfhvWOBhh_3h_iz/exec')
         .then(res => res.json())
@@ -95,15 +93,5 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     </script>
 
-
-   
-
-
-
-
-   
-        
-      
-</div>
 </body>
 </html>
