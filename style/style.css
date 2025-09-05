@@ -265,7 +265,7 @@ img{
 }
 
 .event-artists{
-    font-size:calc(2em + 0.4vw);
+    font-size:calc(1.2em + 0.4vw);
 }
 
 
@@ -304,3 +304,23 @@ width: 50%;
   50% {opacity: 0.5;}
 }
 
+
+.donate-button{ 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    font-family: IBM Plex Mono, SQ Market, Helvetica, Arial, sans-serif;
+    font-size: calc(0.5em + 1vw);
+    color: #ffffff;
+    background-color: #f470d3;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+    border-radius: 0px;
+    margin:0.5em;
+    padding:0.2em;
+    font-weight: 600;
+}
+.donate-button a{
+    text-decoration: none;
+    color:#FFF;
+}
