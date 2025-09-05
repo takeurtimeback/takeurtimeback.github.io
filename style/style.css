@@ -100,6 +100,11 @@ hr{
   height:100%;
   background:rgba(0, 0, 0, 0);
 }
+
+.div-only-mobile span{
+    font-size: 0.5em;
+}
+
 span {
     position: absolute;
     text-align: center;
