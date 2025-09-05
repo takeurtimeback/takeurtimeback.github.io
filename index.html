@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TYT - LANDING</title>
@@ -46,14 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <body>
 
-     
-    <!-- <div class="indexLanding" style="position: absolute; width:100vw; height:100vh; background-image: url('./imgs/TYT_Alley.png'); background-size: cover; background-position: center;">
-        <a class="rotate" id="home-link" style=" position:absolute; top: 38vh; left:47vw; z-index: 2;">
-            <img src="./imgs/Alley_Door.png" style="width: 7vw; max-width: 300px; min-width: 60px; height: auto;" alt="">
-            <span style="position:absolute; bottom:-5vw;">Enter</span>
-        </a>
-    </div> -->
-
      <div class="indexLanding" style="position: absolute; width:100vw; height:100vh; background-image: url('./imgs/TYT_Alley.png'); background-size: cover; background-position: center; display:flex; flex-direction:column; align-items:center; justify-content:center;">
         <a class="rotate" id="home-link" style=" position:absolute; z-index: 2; ">
             <img src="./imgs/Alley_Door.png" style="width: 8vw;  min-width: 80px; height: auto;" alt="">
@@ -61,8 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
         </a>
     </div>
         
-    
-    <!--<img src="./imgs/TYT_Alley.png " style="width:100vw; " alt="">-->
     <!-- set loading text-->
     <div id="loading" style="position:absolute; z-index: 3;">
         <h1 class="center" style="font-size: 2vw; color: rgba(255, 255, 0, 0.25); font-family: 'Cryv2', sans-serif;">
@@ -93,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
         localStorage.setItem('jDat', JSON.stringify(data));
         // Remove loading text
-        document.getElementById("home-link").href="./html/landing.html";
+        document.getElementById("home-link").href="./html/home.html";
         document.getElementById('loading').style.display = 'none';
         })
         .catch(() => {

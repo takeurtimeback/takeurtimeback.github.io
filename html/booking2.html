@@ -2,40 +2,19 @@
 <html>
 <head>
     <title>Booking</title>
+    <meta charset="UTF-8">
+    
     <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">
-    <style>
-        .iframe-row {
-            display: flex;
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
-        .iframe-half {
-            flex: 1;
-            border: none;
-            height: 100vh;
-            width: 100%;
-        }
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-        .backArrow {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            /* Add your image size and styling here */
-        }
-    </style>
+    
 </head>
 <body class="gradient-background">
-    <a href="booking.html">
-        <img class="backArrow" src="../images/back-arrow.png" alt="Back">
-    </a>
+    <!-- Back Arrow -->
+    <a href="./booking.html">
+        <div class="backArrow"></div>
+    </a>  
+
     <div class="iframe-row">
-        <iframe class="iframe-half" src="https://docs.google.com/forms/d/e/1FAIpQLScQDsCKxgXFer1FMIlilYz2nwDvh9CtW4abNIZt40ChcFvggA/viewform?embedded=true" title="Google Form">Loading…</iframe>
+        <iframe class="iframe-half" src="https://docs.google.com/forms/d/e/1FAIpQLScQDsCKxgXFer1FMIlilYz2nwDvh9CtW4abNIZt40ChcFvggA/viewform?embedded=true" title="Google Form"></iframe>
         <iframe class="iframe-half" src="https://calendar.google.com/calendar/u/0/embed?src=6e18a829c54fef5649c84760c5ab53280b0da70787040c74a6e091066531db07@group.calendar.google.com&ctz=America/Vancouver" title="Google Calendar"></iframe>
     </div>
 </body>
