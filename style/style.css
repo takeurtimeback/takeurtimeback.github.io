@@ -38,7 +38,7 @@ p{
      line-height: 1.4;
 }
 li{
-    font-size:calc(6em + 0.4vw);
+    font-size:calc(0.8em + 0.4vw);
 }
 hr{
     color:black;
@@ -209,9 +209,9 @@ img{
     width: 100%; /* Adjust width as needed */
     height: 100%; /* Adjust height as needed */
     background-image: url('./GRDbackground.png');
-    background-size: cover; /* Ensures the image covers the entire div */
+    background-size:cover; /* Ensures the image covers the entire div */
     background-position: center; /* Centers the image */
-    background-repeat: repeat; /* Prevents the image from repeating */
+    
     color: white; 
 }
         
@@ -325,6 +325,13 @@ width: 50%;
     color:#FFF;
 }
 
+.text-only-page .donate-button{
+    position: relative;
+    width: fit-content;
+    font-size: calc(1em + 2vw);
+    margin:auto;
+}
+
 .button-row {
     display: flex;
     width: 100vw;
@@ -356,19 +363,36 @@ width: 50%;
 }
 
 .iframe-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height:100vh;
 }
+
 .iframe-half {
-    flex: 1;
+    flex: 1; 
     border: none;
     height: 100vh;
     width: 100%;
 }
 
+
+@media(max-width:65em){
+    .iframe-row{
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .iframe-half{
+        height: auto;
+        min-height: 1000px; /* approximate full form height */
+    }
+}
 /* Parent container for the shelf and grid */
 .shelf-container {
     position: relative;
@@ -414,4 +438,26 @@ flex-direction: column;
 .grid-container a:hover {
     background-color: rgba(255, 156, 207, 0.164);
     color: #000000;
+}
+
+.text-only-page{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap:1em;
+    font-size:calc(8px+ 1vw); 
+    padding:8%;
+    height:fit-content;
+}
+
+
+
+.text-only-header{
+    color: rgb(255, 255, 255); 
+    text-align: center; 
 }
