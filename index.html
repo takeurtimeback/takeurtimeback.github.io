@@ -15,7 +15,6 @@ const flavorText = [
     "The smell of fish wafts through the air",
     "A small black cat runs by",
     "You hear a faint melody coming from the door",
-
 ];
 //choose random flavour text
 const flavourChoice = Math.floor(Math.random() * flavorText.length);
@@ -23,8 +22,6 @@ const flavourChoice = Math.floor(Math.random() * flavorText.length);
 //set flavour text
 document.addEventListener("DOMContentLoaded", function() {
     // add plain text to screen
-
-
 
     const text = document.createElement("div", id = "myDIV");
     text.id = "myDIV";
@@ -47,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
      <div class="indexLanding" style="position: absolute; width:100vw; height:100vh; background-image: url('./imgs/TYT_Alley.png'); background-size: cover; background-position: center; display:flex; flex-direction:column; align-items:center; justify-content:center;">
         <a class="rotate" id="home-link" style=" position:absolute; z-index: 2; ">
-            <img src="./imgs/Alley_Door.png" style="width: 8vw;  min-width: 80px; height: auto;" alt="">
+            <img src="./imgs/Alley_Door.png" style="width: 8vw;  min-width: 80px; height: auto;" alt="Enter">
             <span style="position:absolute; bottom:-2em;">Enter</span>
         </a>
     </div>
@@ -71,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
             LOADINGLOADING
         </h1>
         
-    <img src="./imgs/catrunning.gif" style="width: 10vw;" alt="" class="center" >
+    <img src="./imgs/catrunning.gif" style="width: 10vw;" alt="" class="center" alt="Loading">
     </div>
   
     <!-- Load Info From Google SPreadsheets-->

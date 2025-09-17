@@ -3,62 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .press-btn {
-            position: absolute;
-            left: 10%;
-            bottom: 10%;
-            padding: 1em 2em;
-            font-size: 1.5em;
-            z-index: 2;
-            cursor: pointer;
-            background: yellow;
-            color: #222;
-            border: none;
-            border-radius: 0.5em;
-            font-weight: bold;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            user-select: none; /* Prevents text selection */
-            -webkit-user-select: none; /* Safari */
-            -ms-user-select: none; /* IE10+/Edge */
-        }
-        #pissg-gif {
-            display: none;
-            rotate: 160deg;
-            width: 20%;
-            height: 40%;
-            bottom: 5%;
-            left: 45%;
-            position: absolute;
-            z-index: 1;
-        }
-    </style>
+    <title>Beyond</title>
+    <link href="../../style/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-    <div>
-        <img src="..\..\imgs\tytimmersivesim\piss.jpg" style="width: 100%; height: 100%; position: absolute;">
-        <img id="pissg-gif" src="..\..\imgs\tytimmersivesim\pissg.gif" alt="Piss GIF">
-        <button class="press-btn"
-            onmousedown="document.getElementById('pissg-gif').style.display='block';"
-            onmouseup="document.getElementById('pissg-gif').style.display='none';"
-            onmouseleave="document.getElementById('pissg-gif').style.display='none';"
-            ontouchstart="document.getElementById('pissg-gif').style.display='block';"
-            ontouchend="document.getElementById('pissg-gif').style.display='none';"
-        >
-            <span style="
-                user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
-                -moz-user-select: none;
-                pointer-events: none;
-                ">
-                PISS!
-            </span>
-        </button>
-        <a href=".\pisser.html">
-            <img src="..\..\imgs\tytimmersivesim\arrow.png" style=" width: 10%; height: 15%;  rotate:-180deg; position: absolute; left: 45%; top: 6%; z-index: 1;">
-        </a> 
-    </div>
+    <img src="../../imgs/tytimmersivesim/piss.jpg" style="width: 100%; height: 100%; position: absolute;" alt="Background Image">
+    
+    <img id="pissg-gif" src="../../imgs/tytimmersivesim/pissg.gif" alt="Piss GIF">
+
+    <button class="piss-btn">PISS!</button>
+
+    <a href="./pisser.html">
+        <img src="../../imgs/tytimmersivesim/arrow.png" style=" width: 10%; height: 15%;  rotate:-180deg; position: absolute; left: 45%; top: 6%; z-index: 1;" alt="Arrow">
+    </a> 
+
+    <!-- script -->
+    <script src="../../scripts/piss_script.js"></script>
 </body>
 </html>
