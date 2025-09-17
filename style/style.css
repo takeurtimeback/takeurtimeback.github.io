@@ -76,8 +76,8 @@ hr{
    content:url(./arrow.png);
    rotate:-90deg; 
    width: 3%; 
-   min-width: 60px; 
-   min-height: 40px; 
+   min-width: 6em; 
+   min-height: 4em; 
    height: 4%; 
    position: absolute; 
    left: 0%; 
@@ -460,7 +460,7 @@ width: 50%;
     flex-direction: column;
     gap:1em;
     font-size:calc(8px+ 1vw); 
-    padding:8%;
+    padding:6%;
     height:fit-content;
 }
 
@@ -531,4 +531,44 @@ button {
     width: 50px;
     height: 30px;
     cursor: pointer;
+}
+
+/* Staff page */
+
+.staff-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* space between cards */
+    padding: 2rem;
+}
+
+.staff-item {
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    gap:1em;
+    text-align: center;
+}
+.staff-container a{
+    text-decoration: none;
+    color:#FFF;
+}
+.staff-container a:hover{
+    color: #f470d3;
+}
+.staff-item h3{
+    font-size:calc(0.8em + 0.5vw);
+}
+.staff-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
