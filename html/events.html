@@ -10,9 +10,7 @@
 <body class="DoorBackground">
     
     <!-- Back Arrow -->
-    <a href="./home.html">
-        <div class="backArrow"></div>
-    </a> 
+    <a href="./home.html" class="backArrow"></a> 
 
     <div class="door-title">
         <h3>(scroll)</h3>
@@ -65,7 +63,7 @@
                 const eventbriteURL = event.Eventbrite || "";
                 console.log(eventbriteURL)
 
-                let liHTML = `<li class="event-item">`;
+                let liHTML = `<li class="event-item flex column">`;
 
                  //add each poster as a rot class and have them linked to their respective eventbrite links        
                 if (posterURL) {
