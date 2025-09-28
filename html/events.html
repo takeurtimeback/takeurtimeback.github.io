@@ -85,11 +85,10 @@
                         <div class="event-time">
                            ${event.Day}
                             ${event.Date} 
-                           
                            <hr class="event-hr">
                         </div>
-                        <div class="event-artists"> 
-                           ${event.Artists}
+                        <div class="event-artists" padding: 0.5em 1em; border-radius: 0.5em;"> 
+                           ${event.Artists.replace(/,/g, '<br>')}
                         </div>
                     </div>
                 </li>`;

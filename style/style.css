@@ -234,7 +234,7 @@ img{
     height: 72vh;
     left:22%;
     z-index: 1;
-    /* background-color: red;   */
+    background-color: rgb(226, 225, 151, 0.8); 
     overflow: auto;
     list-style: none;
     padding: 0;
