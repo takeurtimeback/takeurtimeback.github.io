@@ -60,15 +60,15 @@
                 const match = sheetUrl.match(/\/d\/([^/]+)/);
                 const posterID = match ? match[1] : null;
                 const posterURL = posterID ? `https://drive.google.com/thumbnail?id=${posterID}` : null;
-                const eventbriteURL = event.Eventbrite || "";
-                console.log(eventbriteURL)
+                const TicketLink = event.TicketLink || "";
+                console.log(TicketLink)
 
                 let liHTML = `<li class="event-item flex column">`;
 
-                 //add each poster as a rot class and have them linked to their respective eventbrite links        
+                 //add each poster as a rot class and have them linked to their respective TicketLinks links        
                 if (posterURL) {
-                    if("${eventbriteURL}" != "") {
-                    liHTML += ` <a target="_blank" href="${eventbriteURL}" class="rotate2" >
+                    if("${TicketLink}" != "") {
+                    liHTML += ` <a target="_blank" href="${TicketLink}" class="rotate2" >
                     <img class="poster-image" src="${posterURL}" alt="Poster for ${event.Artists}">
                 </a>`;
 
