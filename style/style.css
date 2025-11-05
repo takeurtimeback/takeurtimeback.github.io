@@ -234,8 +234,8 @@ img{
 
 .event-button{
     position: absolute;
-    right:10vw;
-    top:2vh;
+    right:40vw;
+    bottom:2vh;
     padding:0.5em;
     text-decoration: none;
     background-color:#ff00bb;
